@@ -1,7 +1,8 @@
-#### Sequence Diagram Exericse 0.5 (Tracing https://studies.cs.helsinki.fi/exampleapp/spa)
+### Sequence Diagram Exercise 0.6()
 
 ```mermaid
 sequenceDiagram
+    participant User
     participant Browser
     participant Server
 
@@ -29,4 +30,10 @@ sequenceDiagram
     activate Server
     Server->>Browser: JSON file (data.json)
     deactivate Server
+
+    User->>Browser: Text input.
+    Note right of Browser: The new_note created is sent to the server as a JSON string. 
+    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    Note right of Browser:This will tells the server how to parse the data.(updating the json file)<br> The JavaScript code (main.js) then calls the event handler that'll handle the form's submit event.<br>1.) Prevent the default handling of form's submit (e.preventDefault())<br>2.)The event handler then creates a new note and adds it to the notes list.The server updates the JSON file<br> 3.)The note then rerenders the page with the updated notes list.
+    
 ```
