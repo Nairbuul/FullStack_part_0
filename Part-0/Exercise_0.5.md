@@ -1,4 +1,4 @@
-#### Sequence Diagram Exericse 0.5 (Tracing)
+#### Sequence Diagram Exericse 0.5 (Tracing https://studies.cs.helsinki.fi/exampleapp/spa)
 
 ```mermaid
 sequenceDiagram
